@@ -8,23 +8,35 @@ import { RegistrationComponent } from './registration/registration.component';
 import { SigninComponent } from './signin/signin.component';
 import {Routes, RouterModule} from '@angular/router'
 import { HttpClientModule } from '@angular/common/http';
+import { CreateNewItemComponent } from './admin/create-new-item/create-new-item.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import { AllItemsComponent } from './all-items/all-items.component';
+import {MatCheckboxModule} from '@angular/material/checkbox'; 
 
 const appRoutes: Routes =[
-  { path: 'registration', component:RegistrationComponent}
+  { path: 'registration', component:RegistrationComponent},
+  { path: 'addNew', component:CreateNewItemComponent},
+  { path: 'all', component:AllItemsComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    SigninComponent
+    SigninComponent,
+    CreateNewItemComponent,
+    AllItemsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    MatCheckboxModule,
+    MatCardModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

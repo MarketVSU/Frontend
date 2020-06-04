@@ -12,12 +12,15 @@ import { CreateNewItemComponent } from './admin/create-new-item/create-new-item.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import { AllItemsComponent } from './all-items/all-items.component';
-import {MatCheckboxModule} from '@angular/material/checkbox'; 
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { ProductPageComponent } from './product-page/product-page.component'; 
 
 const appRoutes: Routes =[
   { path: 'registration', component:RegistrationComponent},
   { path: 'addNew', component:CreateNewItemComponent},
-  { path: 'all', component:AllItemsComponent}
+  { path: 'all', component:AllItemsComponent},
+   { path: 'product', component:ProductPageComponent}
+
 ];
 
 @NgModule({
@@ -26,7 +29,8 @@ const appRoutes: Routes =[
     RegistrationComponent,
     SigninComponent,
     CreateNewItemComponent,
-    AllItemsComponent
+    AllItemsComponent,
+    ProductPageComponent
   ],
   imports: [
     BrowserModule,

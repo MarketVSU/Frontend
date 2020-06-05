@@ -13,13 +13,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import { AllItemsComponent } from './all-items/all-items.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { ProductPageComponent } from './product-page/product-page.component'; 
+import { ProductPageComponent } from './product-page/product-page.component';
+import { CartComponent } from './cart/cart.component';
+import { CartItemComponent } from './cart/cart-item/cart-item.component';
+import { OrderRegistrationComponent } from './order-registration/order-registration.component';
+import { OrderCartComponent } from './order-registration/order-cart/order-cart.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { FiltersComponent } from './filters/filters.component'; 
+import {MatExpansionModule} from '@angular/material/expansion'
 
 const appRoutes: Routes =[
   { path: 'registration', component:RegistrationComponent},
   { path: 'addNew', component:CreateNewItemComponent},
   { path: 'all', component:AllItemsComponent},
-   { path: 'product', component:ProductPageComponent}
+  { path: 'product', component:ProductPageComponent},
+  {path:'cart',component:CartComponent},
+  {path:'orderRegistration',component:OrderRegistrationComponent},
+  {path:'',component:HomePageComponent}
 
 ];
 
@@ -30,7 +41,14 @@ const appRoutes: Routes =[
     SigninComponent,
     CreateNewItemComponent,
     AllItemsComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    CartComponent,
+    CartItemComponent,
+    OrderRegistrationComponent,
+    OrderCartComponent,
+    NavbarComponent,
+    HomePageComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +57,7 @@ const appRoutes: Routes =[
     MatCheckboxModule,
     MatCardModule,
     ReactiveFormsModule,
+    MatExpansionModule,
     HttpClientModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes)

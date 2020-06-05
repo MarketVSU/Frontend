@@ -3,14 +3,14 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-5 p-0 m-0">
-                 <img src="https://storage.vsemayki.ru/images/0/1/1909/1909039/previews/people_4_manshort_front_lavender_500.jpg"  alt="img"/>
+                 <img src="{{item.picturePath}}"  alt="img"/>
             </div>
             <div class="col-md-7 mt-3">
                <div class="container-fluid">
                   <div class="row">
                     <div class="col-lg-12  d-flex justify-content-center">
                       <div class="details-title">
-                        Мужская футболка хлопок «GitHub»
+                        {{item.name}}
                        </div>
                     </div>
                     <div class="col-lg-12">
@@ -19,7 +19,7 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
-                         <div class="price-item">Цена - 999 ₽</div>
+                         <div class="price-item">Цена - {{item.price}} ₽</div>
                     </div>
                     <div class='col-lg-12 mt-2'>
                      <span class="mt-6 font-weight-bold">Pазмер</span>
@@ -40,10 +40,10 @@
                     <div class='col-lg-12 mt-4'>
                         <span class="mt-6 font-weight-bold">Описание</span>
                         <p class='mt-2'>
-                            Идею данной футболки поймет любой айтишник. Это интерпретация логотипа «GitHub» под логотип одного из самых известных сайтов для взрослых.
-                            </p>
+                           {{item.description}}
+                        </p>
                     </div>
-                    <div  class="tocart"><span class=" buyButton btn btn-success">В Корзину</span></div>
+                    <div (click)="addInCart()" class="tocart"><span class=" buyButton btn btn-success">В Корзину</span></div>
                   </div>
                </div>
             </div>

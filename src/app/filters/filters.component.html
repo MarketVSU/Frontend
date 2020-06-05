@@ -1,0 +1,26 @@
+<div class="filters">
+        <div   class="search m-0">
+            <input  type="text" class="searchTerm" placeholder="Seach">
+            <button type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+            </button>
+        </div>
+        <div class="base-filters m-0">
+            <mat-accordion>       
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Фильтры
+                    </mat-panel-title>
+                   
+                  </mat-expansion-panel-header>
+                  <div class="form-group price">
+                    <input formControlName="minPrice" type="text" (keypress)="numberOnly($event)" class="mr-3 col-2 form-control" id="min" placeholder="мин. цена">
+                    <input type="text"  formControlName="maxPrice" (keypress)="numberOnly($event)" class="form-control col-2" id="max" placeholder="макс. цена">
+                </div>
+                </mat-expansion-panel>
+              </mat-accordion>
+              
+        </div>
+</div>

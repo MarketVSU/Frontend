@@ -2,7 +2,7 @@ import { Item } from './item';
 
 export class CartItem
 {
-    public count:Number;
+    public count:number;
     public size:String;
     public item:Item;
 }

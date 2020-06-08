@@ -20,4 +20,19 @@ export class CreateService
     {
         return this.myForm;
     }
+
+    sendInformation(colors:String[],sizes:String[])
+    {
+        const body = {
+            name:this.myForm.value.name, 
+            imageUrl: this.myForm.value.imageurl,
+            price:this.myForm.value.price,
+            description:this.myForm.value.description,
+            colors,
+            sizes,
+          
+        };
+
+console.log(body);
+    }
 }

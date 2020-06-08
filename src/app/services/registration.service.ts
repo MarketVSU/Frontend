@@ -44,7 +44,7 @@ export class RegistrationService
                         lastname: this.myForm.value.userSurname,
                         email:this.myForm.value.userEmail,
                         password:this.myForm.value.Passwords.password,
-                        content:this.myForm.value.userImg.value
+                      
                     };
 
         console.log(body);

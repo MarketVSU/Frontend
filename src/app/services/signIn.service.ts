@@ -27,6 +27,7 @@ export class SignInService
 				password:this.signInForm.value.userPassword
 			};
 
+        console.log(body)
         return this.http.post(this.baseUrl+'/signIn',body);
    }
 

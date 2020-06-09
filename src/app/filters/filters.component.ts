@@ -8,6 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class FiltersComponent implements OnInit {
 
   panelOpenState = false;
+  S = false;
+  M = false;
+  XXL=false;
+  XXXL=true;
+  red=false;
+  public black=true;
+  white=false;
+  yellow=false;
   constructor() { }
 
   ngOnInit() {

@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../сlasses/user'
+import {RegistrationService} from '../services/registration.service'
+
 @Component({
   selector: 'app-user-page',
   templateUrl: './user-page.component.html',
-  styleUrls: ['./user-page.component.scss']
+  styleUrls: ['./user-page.component.scss'],
+  providers:[RegistrationService]
 })
 export class UserPageComponent implements OnInit {
 
   user:User;
-  constructor() { }
+  constructor(private regService:RegistrationService) { }
 
   ngOnInit() {
     this.user=new User();
@@ -19,4 +22,9 @@ export class UserPageComponent implements OnInit {
     this.user.telephoneNumber="+79204473470"
     }
 
+
+    edit()
+    {
+      this.regService.sendEditedInformation()
+    }
 }

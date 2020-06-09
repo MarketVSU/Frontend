@@ -21,16 +21,19 @@ import { OrderCartComponent } from './order-registration/order-cart/order-cart.c
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FiltersComponent } from './filters/filters.component'; 
-import {MatExpansionModule} from '@angular/material/expansion'
+import {MatExpansionModule} from '@angular/material/expansion';
+import { UserPageComponent } from './user-page/user-page.component'
 
 const appRoutes: Routes =[
   { path: 'registration', component:RegistrationComponent},
+  {path:'signin',component:SigninComponent},
   { path: 'addNew', component:CreateNewItemComponent},
   { path: 'all', component:AllItemsComponent},
   { path: 'product', component:ProductPageComponent},
   {path:'cart',component:CartComponent},
   {path:'orderRegistration',component:OrderRegistrationComponent},
-  {path:'',component:HomePageComponent}
+  {path:'',component:HomePageComponent},
+  {path:'userPage',component:UserPageComponent}
 
 ];
 
@@ -48,7 +51,8 @@ const appRoutes: Routes =[
     OrderCartComponent,
     NavbarComponent,
     HomePageComponent,
-    FiltersComponent
+    FiltersComponent,
+    UserPageComponent
   ],
   imports: [
     BrowserModule,

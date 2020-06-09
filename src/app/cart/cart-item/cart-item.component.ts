@@ -25,6 +25,7 @@ export class CartItemComponent implements OnInit {
 
   deleteItem()
   {
+    console.log("DeleteItem");
     let itemsInCart:CartItem[]=JSON.parse(localStorage.getItem ("itemsInCart"));
     let index=itemsInCart.findIndex(i=>i.item.id=this.cartItem.id);
     itemsInCart.splice(index,1);

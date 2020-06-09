@@ -12,6 +12,7 @@ export class RegistrationService
             "userName":["",[Validators.required,Validators.minLength(5),Validators.maxLength(15)]],
             "userSurname":["",[Validators.required,Validators.minLength(5),Validators.maxLength(15)]],
             "userEmail": ["",[Validators.required,Validators.email]],
+            "userTelephone":["",[Validators.required]],
             "Passwords":this.fb.group({
                             "password":["",[Validators.required,Validators.minLength(0),Validators.maxLength(15)]],
                             "confirmPassword":["",[Validators.required,Validators.minLength(0),Validators.maxLength(15)]]
@@ -44,12 +45,29 @@ export class RegistrationService
                         lastname: this.myForm.value.userSurname,
                         email:this.myForm.value.userEmail,
                         password:this.myForm.value.Passwords.password,
+                        telephoneNumber:this.myForm.value.userTelephone,
                       
                     };
 
         console.log(body);
         
        return  this.http.post(this.baseUrl+'/registration',body);
+				 
+    }
+
+    sendEditedInformation(){
+         
+        const body = {
+                        firstname:this.myForm.value.userName, 
+                        lastname: this.myForm.value.userSurname,
+                        email:this.myForm.value.userEmail,
+                        telephoneNumber:this.myForm.value.userTelephone
+                      
+                    };
+
+        console.log(body);
+        
+       //return  this.http.post(this.baseUrl+'/editUser',body);
 				 
     }
 }

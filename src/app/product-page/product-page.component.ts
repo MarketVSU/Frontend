@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Item} from '../сlasses/item';
-import {cartItem, CartItem} from '../сlasses/cartItem'
+import {CartItem} from '../сlasses/cartItem'
 
 @Component({
   selector: 'app-product-page',
@@ -19,7 +19,7 @@ export class ProductPageComponent implements OnInit {
     this.item.id=1;
     this.item.description='Идею данной футболки поймет любой айтишник. Это интерпретация логотипа «GitHub» под логотип одного из самых известных сайтов для взрослых.';
     this.item.name='Мужская футболка хлопок «GitHub»';
-    this.item.price='1111';
+    this.item.price=1111;
     this.item.picturePath='https://storage.vsemayki.ru/images/0/1/1909/1909039/previews/people_4_manshort_front_lavender_500.jpg'
     
   }

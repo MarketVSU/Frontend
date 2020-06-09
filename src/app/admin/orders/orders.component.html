@@ -1,0 +1,10 @@
+<div class="order-page">
+    <div class="title mt-5">
+        Заказы
+    </div>
+    <div class="orders">
+        <div *ngFor="let cartItem of orders; let i = index">
+            <app-order-card></app-order-card>
+        </div>
+    </div>
+</div>

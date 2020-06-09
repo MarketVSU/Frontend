@@ -11,6 +11,8 @@ export class OrderRegistrationComponent implements OnInit {
  
   pochta=true;
   curier=false;
+  nal=true;
+  online=false;
   constructor() { }
   ngOnInit() {
   }
@@ -26,5 +28,18 @@ export class OrderRegistrationComponent implements OnInit {
     this.curier=true;
     this.pochta=false;
   }
+
+  setNalTrue()
+  {
+    this.online=false;
+    this.nal=true;
+  }
+
+  setOnlineTrue()
+  {
+    this.online=true;
+    this.nal=false;
+  }
+
 
 }

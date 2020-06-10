@@ -19,14 +19,14 @@ export class OrderCartComponent implements OnInit {
   totalPriceForItem(item)
   {
     console.log(item)
-    let cartItem:CartItem=this.cartItems.find(i=>i.item.id==item.item.id);
-    return cartItem.count * cartItem.item.price
+    let cartItem:CartItem=this.cartItems.find(i=>i.item.Id==item.item.Id);
+    return cartItem.count * cartItem.item.Price
   }
 
   totalPrice()
   {
     let total=0;
-    this.cartItems.forEach(i=>total+=i.count * i.item.price)
+    this.cartItems.forEach(i=>total+=i.count * i.item.Price)
     return total
   }
 }

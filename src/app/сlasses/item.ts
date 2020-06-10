@@ -2,12 +2,12 @@ import { ItemSize } from './itemSize';
 
 export class Item
 {
-    public id:Number;
-    public color:String;
-    public picturePath:String;
-    public price:number;
-    public name:String;
-    public description:String;
-    public itemCount:Number;
-    public sizes:ItemSize[];
+    public Id:Number;
+    public Color:String;
+    public PicturePath:String;
+    public Price:number;
+    public Name:String;
+    public Description:String;
+    public ItemCount:Number;
+    public Sizes:ItemSize[];
 }

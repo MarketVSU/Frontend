@@ -26,19 +26,24 @@ import { UserPageComponent } from './user-page/user-page.component';
 import { OrdersComponent } from './admin/orders/orders.component';
 import { OrderCardComponent } from './admin/order-card/order-card.component'
 import { HTTP_INTERCEPTORS } from "@angular/common/http";
-import {AuthInterceptor} from './Auth/auth.interceptor'
+import {AuthInterceptor} from './Auth/auth.interceptor';
+import { ActivatePageComponent } from './activate-page/activate-page.component';
+import { ItemComponent } from './all-items/item/item.component';
+import { OrderCompletePageComponent } from './order-complete-page/order-complete-page.component'
 
 const appRoutes: Routes =[
   { path: 'registration', component:RegistrationComponent},
   {path:'signin',component:SigninComponent},
   { path: 'addNew', component:CreateNewItemComponent},
   { path: 'all', component:AllItemsComponent},
-  { path: 'product', component:ProductPageComponent},
+  { path: 'product/:id', component:ProductPageComponent},
   {path:'cart',component:CartComponent},
   {path:'orderRegistration',component:OrderRegistrationComponent},
   {path:'',component:HomePageComponent},
   {path:'userPage',component:UserPageComponent},
-  {path:'orders',component:OrdersComponent}
+  {path:'orders',component:OrdersComponent},
+  {path:"activate",component:ActivatePageComponent},
+  {path:"orderComplete",component:OrderCompletePageComponent}
 
 ];
 
@@ -59,7 +64,10 @@ const appRoutes: Routes =[
     FiltersComponent,
     UserPageComponent,
     OrdersComponent,
-    OrderCardComponent
+    OrderCardComponent,
+    ActivatePageComponent,
+    ItemComponent,
+    OrderCompletePageComponent
   ],
   imports: [
     BrowserModule,

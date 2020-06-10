@@ -23,12 +23,12 @@ export class SignInService
    sendData()
    {
 	   let body={
-				email:this.signInForm.value.userEmail,
+				userName:this.signInForm.value.userEmail,
 				password:this.signInForm.value.userPassword
 			};
 
         console.log(body)
-        return this.http.post(this.baseUrl+'/signIn',body);
+        return this.http.post(this.baseUrl+'/SignIn',body);
    }
 
 }

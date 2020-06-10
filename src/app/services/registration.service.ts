@@ -41,27 +41,23 @@ export class RegistrationService
     sendRegistrationInformation(){
          
         const body = {
-                        firstname:this.myForm.value.userName, 
-                        lastname: this.myForm.value.userSurname,
-                        email:this.myForm.value.userEmail,
-                        password:this.myForm.value.Passwords.password,
-                        telephoneNumber:this.myForm.value.userTelephone,
-                      
+                        Name:this.myForm.value.userName+this.myForm.value.userSurname,
+                        Login:this.myForm.value.userEmail,
+                        Password:this.myForm.value.Passwords.password,
+                        TelephoneNumber:this.myForm.value.userTelephone,
                     };
 
         console.log(body);
         
-       return  this.http.post(this.baseUrl+'/registration',body);
+       return  this.http.post(this.baseUrl+'/Registration',body);
 				 
     }
 
     sendEditedInformation(){
          
         const body = {
-                        firstname:this.myForm.value.userName, 
-                        lastname: this.myForm.value.userSurname,
-                        email:this.myForm.value.userEmail,
-                        telephoneNumber:this.myForm.value.userTelephone
+                        Name:this.myForm.value.userName + this.myForm.value.userSurname,
+                        TelephoneNumber:this.myForm.value.userTelephone
                       
                     };
 

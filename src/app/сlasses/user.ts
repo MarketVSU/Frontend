@@ -1,8 +1,7 @@
 export class User
 {
-    public id:Number;
-    public firstName:String;
-    public lastName:String;
-    public email:String;
-    public telephoneNumber:String;
+    public Id:Number;
+    public Name:String;
+    public Login:String;
+    public TelephoneNumber:String;
 }

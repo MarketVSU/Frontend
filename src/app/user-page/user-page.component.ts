@@ -15,11 +15,10 @@ export class UserPageComponent implements OnInit {
 
   ngOnInit() {
     this.user=new User();
-    this.user.id=1;
-    this.user.firstName="Armen";
-    this.user.lastName="Tovmasyan";
-    this.user.email="armentovmasyan@gmail.com";
-    this.user.telephoneNumber="+79204473470"
+    this.user.Id=1;
+    this.user.Name="Armen Tovmasyan";
+    this.user.Login="armentovmasyan@gmail.com";
+    this.user.TelephoneNumber="+79204473470"
     }
 
 

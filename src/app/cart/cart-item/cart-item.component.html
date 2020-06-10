@@ -4,9 +4,9 @@
        <i (click)="deleteItem()" class="fa fa-times-circle close-icon" aria-hidden="true"></i>
      </div>
       <div class="col-2 p-0 m-0">
-        <img class="p-0 m-0 cart-item-img"src="{{cartItem.item.picturePath}}" alt="Cartimg"/>
+        <img class="p-0 m-0 cart-item-img"src="{{cartItem.item.PicturePath}}" alt="Cartimg"/>
       </div>
-      <div class="col-5 label">{{cartItem.item.name}}</div>
+      <div class="col-5 label">{{cartItem.item.Name}}</div>
       <div class="col-2  p-0 m-0 d-flex align-items-center justify-content-between">
         <div (click)="minusCount()" class="minus"><i class="fa fa-minus" aria-hidden="true"></i></div>
         <input class="cart-input" value={{cartItem.count}}/>

@@ -1,6 +1,7 @@
 import { FormGroup, FormControl, Validators,FormBuilder,AbstractControl} from '@angular/forms';
 import { HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
+import {Item} from '../сlasses/item'
 
 @Injectable()
 export class CreateService
@@ -16,6 +17,17 @@ export class CreateService
         }
     );
 
+
+    setValues(item:Item)
+    {
+        this.myForm.setValue({
+            name:item.Name,
+            imageurl:item.PicturePath,
+            price:item.Price,
+            description:item.Description
+          },{onlySelf:true});
+    }
+
     getMyForm()
     {
         return this.myForm;
@@ -24,15 +36,29 @@ export class CreateService
     sendInformation(colors:String[],sizes:String[])
     {
         const body = {
-            name:this.myForm.value.name, 
-            imageUrl: this.myForm.value.imageurl,
-            price:this.myForm.value.price,
-            description:this.myForm.value.description,
-            colors,
-            sizes,
+            Name:this.myForm.value.name, 
+            PicturePath: this.myForm.value.imageurl,
+            Price:this.myForm.value.price,
+            Description:this.myForm.value.description,
+            Color:colors[0],
+            Sizes:sizes,
           
         };
 
-console.log(body);
+        console.log(body);
+        return this.http.post(this.baseUrl+"/CreateNewItem",body)
+    }
+
+
+    editItem()
+    {
+        const body = {
+            Name:this.myForm.value.name, 
+            PicturePath: this.myForm.value.imageurl,
+            Price:this.myForm.value.price,
+            Description:this.myForm.value.description,
+        };
+
+        return this.http.put(this.baseUrl+"/Update",body)
     }
 }

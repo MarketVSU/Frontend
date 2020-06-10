@@ -16,8 +16,8 @@
                    
                   </mat-expansion-panel-header>
                   <div class="form-group price">
-                    <input formControlName="minPrice" type="text" (keypress)="numberOnly($event)" class="mr-3 col-2 form-control" id="min" placeholder="мин. цена">
-                    <input type="text"  formControlName="maxPrice" (keypress)="numberOnly($event)" class="form-control col-2" id="max" placeholder="макс. цена">
+                    <input type="text" (keypress)="numberOnly($event)" class="mr-3 col-2 form-control" id="min" placeholder="мин. цена">
+                    <input type="text"  (keypress)="numberOnly($event)" class="form-control col-2" id="max" placeholder="макс. цена">
                 </div>
                 <div class="mb-2 price">
                  

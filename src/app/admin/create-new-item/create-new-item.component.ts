@@ -27,6 +27,10 @@ export class CreateNewItemComponent implements OnInit {
     let colors:String[]=this.getTrueColors();
     let sizes:String[]=this.getTrueSizes();
     this.service.sendInformation(colors,sizes)
+        .subscribe(
+          (data)=>{},
+          error=>console.log(error)
+        )
   }
 
   getTrueColors()

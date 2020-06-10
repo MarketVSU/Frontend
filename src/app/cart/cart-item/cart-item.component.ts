@@ -27,7 +27,7 @@ export class CartItemComponent implements OnInit {
   {
     console.log("DeleteItem");
     let itemsInCart:CartItem[]=JSON.parse(localStorage.getItem ("itemsInCart"));
-    let index=itemsInCart.findIndex(i=>i.item.id=this.cartItem.id);
+    let index=itemsInCart.findIndex(i=>i.item.Id=this.cartItem.id);
     itemsInCart.splice(index,1);
     localStorage.setItem("itemsInCart", JSON.stringify(itemsInCart));
     this.cartItem=undefined;
@@ -42,13 +42,13 @@ export class CartItemComponent implements OnInit {
   saveInLocalStorage()
   {
     let itemsInCart:CartItem[]=JSON.parse(localStorage.getItem ("itemsInCart"));
-    let index=itemsInCart.findIndex(i=>i.item.id=this.cartItem.id);
+    let index=itemsInCart.findIndex(i=>i.item.Id=this.cartItem.id);
     itemsInCart.splice(index,1);
     itemsInCart.push(this.cartItem);
     localStorage.setItem("itemsInCart", JSON.stringify(itemsInCart));
   }
   getTotalPrice()
   {
-    return this.cartItem.count * this.cartItem.item.price;
+    return this.cartItem.count * this.cartItem.item.Price;
   }
 }

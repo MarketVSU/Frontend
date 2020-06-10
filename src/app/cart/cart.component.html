@@ -10,10 +10,10 @@
           <div class="row">
               <div class="col">
                  Итого:
-                 <span class="cart-total-price"> 990руб.</span>
+                 <span class="cart-total-price"> {{getTotalPrice()}}</span>
               </div>
               <div class="col d-flex justify-content-end">
-                 <button type="button" class="btn btn-secondary">Оформить заказ</button>
+                 <button routerLink='/orderRegistration' type="button" class="btn btn-secondary">Оформить заказ</button>
               </div>
           </div>
        </div>

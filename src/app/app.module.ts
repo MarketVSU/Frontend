@@ -25,6 +25,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { UserPageComponent } from './user-page/user-page.component';
 import { OrdersComponent } from './admin/orders/orders.component';
 import { OrderCardComponent } from './admin/order-card/order-card.component'
+import { HTTP_INTERCEPTORS } from "@angular/common/http";
+import {AuthInterceptor} from './Auth/auth.interceptor'
 
 const appRoutes: Routes =[
   { path: 'registration', component:RegistrationComponent},
@@ -71,7 +73,13 @@ const appRoutes: Routes =[
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 

@@ -1,0 +1,20 @@
+<mat-card class="example-card m-5">
+    <mat-card-header>
+      <mat-card-title>
+        {{item.Name}}
+      
+      </mat-card-title>
+     
+      <mat-card-subtitle>Цена - {{item.price}} руб.</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{item.PicturePath}}" alt="Photo of a Shiba Inu">
+    <mat-card-content class="x">
+      <p class="x"><b>Доступные размеры</b></p> 
+      <p class="x">S,M</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <span routerLink='/product/{{item.Id}}'>
+        <button type="button" class="btn btn-success" >Подробно</button>
+      </span>
+    </mat-card-actions>
+  </mat-card>

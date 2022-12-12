@@ -39,7 +39,7 @@
     "@types/jquery": "^3.3.38",
     "angular-material": "^1.1.21",
     "core-js": "^3.6.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "file-saver": "^2.0.2",
     "install": "^0.13.0",
     "jquery": "^3.5.1",
